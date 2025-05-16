@@ -1,17 +1,16 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
 body {
-    min-height: 100%;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #fff;
@@ -27,109 +26,133 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 350px;
+    width: 500px;
     padding: 2.5rem 2rem;
     text-align: center;
 }
 
-    .login-container h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-      color: #ffd700;
-    }
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: #ffd700;
+}
 
-    .login-container p {
-      font-weight: 300;
-      color: #eee;
-      margin-bottom: 2rem;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-    }
-
-    form {
-      width: 100%;
-    }
-
-    .input-group {
-    margin-bottom: 1.5rem;
-    }
-
-    .input-group label {
-    display: block;
-    font-weight: 500;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #ffd700dd;
-    letter-spacing: 0.8px;
-    }
-
-    .input-group input[type="text"],
-    .input-group input[type="password"] {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    padding-right: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    outline: none;
+p {
+    font-weight: 300;
+    color: #eee;
+    margin-bottom: 2rem;
     font-size: 1rem;
-    color: #333;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    }
+    letter-spacing: 0.5px;
+}
 
-    .toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: #888;
+form {
+    width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #ffd700dd;
+  letter-spacing: 0.8px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-group input[type="text"],
+.input-wrapper input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem; 
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #ffd700cc;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #ffd700;
     cursor: pointer;
-    }
+}
 
-    .checkbox-group {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-      color: #ffd700cc;
-      font-weight: 400;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      text-align: left;
-    }
+button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #ffd700;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .checkbox-group input[type="checkbox"] {
-      margin-right: 0.5rem;
-      width: 18px;
-      height: 18px;
-      accent-color: #ffd700;
-      cursor: pointer;
-    }
+button:hover {
+    background: #bb9f02;
+}
 
-    button {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      background: #ffd700;
-      color: #222;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      letter-spacing: 1.5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+@media (max-width: 400px) {
+    .login-container {
+      width: 300px;
+      height: 400px;
+      padding: 2rem 1.5rem;
     }
-
-    button:hover {
-      background: #bb9f02;
+    h1{
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-
-    @media (max-width: 400px) {
-      .login-container {
-        width: 90%;
-        padding: 2rem 1.5rem;
-      }
+    p{
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
     }
+    label{
+      font-size: 0.7rem;
+    }
+    .input-group input[type="text"],
+    .input-wrapper input[type="password"],
+    button{
+      font-size: 0.8rem;
+    }
+    .input-group{
+      margin-bottom: 1rem;
+    }
+}
